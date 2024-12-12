@@ -1,0 +1,47 @@
+[
+    {
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "album": "A Night at the Opera",
+      "year": 1975,
+      "genre": "Rock",
+      "duration": 354,
+      "image": "https://example.com/bohemian_rhapsody.jpg"
+    },
+    {
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV",
+      "year": 1971,
+      "genre": "Rock",
+      "duration": 482,
+      "image": "https://example.com/stairway_to_heaven.jpg"
+    },
+    {
+      "title": "Imagine",
+      "artist": "John Lennon",
+      "album": "Imagine",
+      "year": 1971,
+      "genre": "Pop",
+      "duration": 183,
+      "image": "https://example.com/imagine.jpg"
+    },
+    {
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "album": "Hotel California",
+      "year": 1976,
+      "genre": "Rock",
+      "duration": 391,
+      "image": "https://example.com/hotel_california.jpg"
+    },
+    {
+      "title": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "album": "Nevermind",
+      "year": 1991,
+      "genre": "Grunge",
+      "duration": 301,
+      "image": "https://example.com/smells_like_teen_spirit.jpg"
+    }
+  ]

@@ -1,20 +1,25 @@
 const mongoose = require("mongoose");
-const Song = require("./models/Song");
-import { createServer } from 'node:http';
+const express = require("express");
+const Song = require("./src/models/Song");
 
-mongoose.connect("mongodb://127.0.0.1:27017/spotifyclone"); // corrigir depois
+//import { createServer } from 'node:http';
+
+mongoose.connect("mongodb://127.0.0.1:27017/spotifyclone");
+
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
-    console.log("Connected successfully");
+  console.log("Connected successfully");
 });
 
-const server = createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello World!\n');
-});
+const app = express();
 // starts a simple http server locally on port 3000
-server.listen(3000, '127.0.0.1', () => {
+app.listen(3000, '127.0.0.1', () => {
   console.log('Listening on 127.0.0.1:3000');
+});
+
+app.get("/", async (req, res) => {
+  const songs = await Song.find();
+  res.json(songs);
 });
