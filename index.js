@@ -14,9 +14,12 @@ db.once("open", function () {
 });
 
 const app = express();
-// starts a simple http server locally on port 3000
-app.listen(3000, '127.0.0.1', () => {
-  console.log('Listening on 127.0.0.1:3000');
+const cors = require("cors");
+
+app.use(cors());
+
+app.listen(5000, '127.0.0.1', () => {
+  console.log('Listening on 127.0.0.1:5000');
 });
 
 app.get("/", async (req, res) => {
